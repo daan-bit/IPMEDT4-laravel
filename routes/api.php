@@ -35,3 +35,5 @@ Route::group([
 
 });
 
+Route::post('/store', [App\Http\Controllers\onderzoekController::class, 'store']);
+
