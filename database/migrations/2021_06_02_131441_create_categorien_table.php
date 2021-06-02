@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOnderzoekenTable extends Migration
+class CreateCategorienTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateOnderzoekenTable extends Migration
      */
     public function up()
     {
-        Schema::create('onderzoeken', function (Blueprint $table) {
-            $table->id();
-            $table->string('naam')->default('Alex');
+        Schema::create('categorien', function (Blueprint $table) {
+            $table->string('naam')->unique();
         });
     }
 
@@ -26,6 +25,6 @@ class CreateOnderzoekenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('onderzoeken');
+        Schema::dropIfExists('categorien');
     }
 }

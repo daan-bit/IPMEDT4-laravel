@@ -35,5 +35,5 @@ Route::group([
 
 });
 
-Route::post('store', 'onderzoekController@store');
+Route::post('store', 'OnderzoekController@store');
 

@@ -9,7 +9,7 @@ class onderzoekController extends Controller
 {
     public function store(Request $request){
             Onderzoek::create($request->all());
-            return ["Succesvol aan db toegevoegd"];
+            return 'Onderzoek in database aangemaakt';
 
         }            
     }
