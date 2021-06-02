@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Onderzoek extends Model
 {
+    protected $guarded = [];
     use HasFactory;
+
+    public $timestamps = false;
 
     protected $table = 'onderzoeken';
 }

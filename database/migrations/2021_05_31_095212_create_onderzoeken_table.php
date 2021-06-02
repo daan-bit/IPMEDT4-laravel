@@ -15,7 +15,7 @@ class CreateOnderzoekenTable extends Migration
     {
         Schema::create('onderzoeken', function (Blueprint $table) {
             $table->id();
-            $table->string('naam');
+            $table->string('naam')->default('Alex');
         });
     }
 

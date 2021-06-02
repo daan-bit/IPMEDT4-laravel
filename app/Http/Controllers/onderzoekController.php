@@ -3,20 +3,15 @@
 namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
+use App\Models\Onderzoek;
 
 class onderzoekController extends Controller
 {
-    public function store(Request $request, \App\Models\Onderzoek $onderzoek){
+    public function store(Request $request){
+            Onderzoek::create($request->all());
+            return 'lol';
 
-        return $request->input();
-
-        // $onderzoek->naam = $request->input();
-
-        // try{
-        //     $onderzoek->save();
-        //     return 'Hallo';
-        // }catch(Exception $e){
-        //     return 'nee';
-        // }
+        }
+            
     }
-}
+
