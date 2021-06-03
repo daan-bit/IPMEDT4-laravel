@@ -32,14 +32,16 @@ Route::group([
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
+    Route::post('vragen/store', 'VraagController@store');
 
 });
 
 Route::post('store', 'OnderzoekController@store');
 Route::get('onderzoek/{id}', 'OnderzoekController@show');
 
+/*Beveiligde route*/
+//Route::middleware('api:auth')->post('vragen/store', 'VraagController@store');
 
-Route::post('vragen/store', 'VraagController@store');
 Route::get('categorien/all', 'CategorieController@index');
 
 
