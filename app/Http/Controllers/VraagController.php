@@ -9,8 +9,6 @@ class VraagController extends Controller
 {
     public function store(Request $request){
         $vraag  = new Vraag();
-
-
         $gesaved = $vraag->save(); {
         if($gesaved) {
         return response()->json(['message' => 'Vraag succesvol toegevoegd!']);
@@ -18,4 +16,9 @@ class VraagController extends Controller
             return response()->json(['message' => 'Vraag kon niet toegevoegd worden. Probeer opnieuw!', 401]);  
         }
     }
+
+    public function show($id) {
+        $vragen = Vragen::find($id);
+        return response()->json($vragen);
+    }   
 }
