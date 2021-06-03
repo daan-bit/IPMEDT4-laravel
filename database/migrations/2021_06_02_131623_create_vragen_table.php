@@ -20,7 +20,7 @@ class CreateVragenTable extends Migration
             $table->string('cat_naam');
             $table->foreign("cat_naam")->references("naam")->on("categorien");
             $table->string('vraag');
-            $table->string('type_vraag'); //open of meerkeuze
+            $table->string('type_vraag')->default('meerkeuze'); //open of meerkeuze
         });
     }
 
