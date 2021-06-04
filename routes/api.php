@@ -38,6 +38,8 @@ Route::group([
 
 Route::post('store', 'OnderzoekController@store');
 Route::get('onderzoek/{id}', 'OnderzoekController@show');
+//we zullen de naam van functie showquestion nog wijzigen, dit is tijdelijk
+Route::get('onderzoek/{id}/vragen', 'OnderzoekController@showQuestion');
 
 /*Beveiligde route*/
 //Route::middleware('api:auth')->post('vragen/store', 'VraagController@store');

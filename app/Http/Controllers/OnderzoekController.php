@@ -18,5 +18,10 @@ class onderzoekController extends Controller
         $onderzoeken = Onderzoek::find($id);
         return response()->json($onderzoeken);
     }
+
+    public function showQuestion($id) {
+        $vragen = Onderzoek::find($id)->vragen;
+        return response()->json($vragen);
+    }
     }
 

@@ -11,4 +11,8 @@ class Onderzoek extends Model
     use HasFactory;
     
     protected $table = 'onderzoeken';
+
+    public function vragen() {
+        return $this->hasMany(Vraag::class, 'onderzoek_id');
+    }
 }
