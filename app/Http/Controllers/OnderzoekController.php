@@ -10,7 +10,11 @@ class onderzoekController extends Controller
     public function store(Request $request){
             Onderzoek::create($request->all());
             return 'Onderzoek in database aangemaakt';
-
-        }            
+        }    
+        
+    public function index(){
+        return Onderzoek::all();
+        }
     }
 
+    

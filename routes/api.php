@@ -36,4 +36,5 @@ Route::group([
 });
 
 Route::post('store', 'OnderzoekController@store');
+Route::get('onderzoeken', 'OnderzoekController@index');
 
