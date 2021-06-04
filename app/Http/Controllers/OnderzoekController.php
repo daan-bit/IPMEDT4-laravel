@@ -16,13 +16,15 @@ class onderzoekController extends Controller
         return Onderzoek::all();
         }
 
-    }
-    
     //toegevoegd door alex, dit wordt straks in een div gezet bij vragen aanmaken en andere functionaliteiten
     public function show($id) {
         $onderzoeken = Onderzoek::find($id);
         return response()->json($onderzoeken);
     }
-    }
+
+}
+    
+    
+
 
     
