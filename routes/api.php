@@ -37,9 +37,7 @@ Route::group([
 });
 
 Route::post('store', 'OnderzoekController@store');
-<<<<<<< HEAD
 Route::get('onderzoeken', 'OnderzoekController@index');
-=======
 Route::get('onderzoek/{id}', 'OnderzoekController@show');
 
 /*Beveiligde route*/
@@ -47,5 +45,4 @@ Route::get('onderzoek/{id}', 'OnderzoekController@show');
 
 Route::get('categorien/all', 'CategorieController@index');
 
->>>>>>> development
 
