@@ -9,6 +9,8 @@ class Onderzoek extends Model
 {
     protected $guarded = [];
     use HasFactory;
+
+    public $timestamps = false;
     
     protected $table = 'onderzoeken';
 

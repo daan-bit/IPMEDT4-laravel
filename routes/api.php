@@ -37,6 +37,7 @@ Route::group([
 });
 
 Route::post('store', 'OnderzoekController@store');
+Route::get('onderzoeken', 'OnderzoekController@index');
 Route::get('onderzoek/{id}', 'OnderzoekController@show');
 //we zullen de naam van functie showquestion nog wijzigen, dit is tijdelijk
 Route::get('onderzoek/{id}/vragen', 'OnderzoekController@showQuestion');
