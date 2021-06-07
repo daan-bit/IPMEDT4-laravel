@@ -46,3 +46,5 @@ Route::get('onderzoek/{id}', 'OnderzoekController@show');
 Route::get('categorien/all', 'CategorieController@index');
 
 
+//onderzoek aanvragen voor gebruikers
+Route::get('/onderzoeken/{code}', 'OnderzoekController@show');

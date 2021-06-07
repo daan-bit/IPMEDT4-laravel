@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Onderzoek extends Model
 {
     protected $guarded = [];
+    protected $fillable = ['code','name'];
     use HasFactory;
 
     public $timestamps = false;
