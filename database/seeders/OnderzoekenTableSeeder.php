@@ -14,13 +14,13 @@ class OnderzoekenTableSeeder extends Seeder
     public function run()
     {
 
-        DB::table('Onderzoeken')->insert([
-            'name' => 'Onderzoek test 1',
+        DB::table('onderzoeken')->insert([
+            'naam' => 'Onderzoek test 1',
             'max_aantal_mensen' => 20,
             'code' => 'ipmedt4alex',
         ]);
-        DB::table('Onderzoeken')->insert([
-            'name' => 'Onderzoek test 2',
+        DB::table('onderzoeken')->insert([
+            'naam' => 'Onderzoek test 2',
             'max_aantal_mensen' => 40,
             'code' => 'a2x3s5r6',
         ]);
