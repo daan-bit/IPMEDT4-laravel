@@ -37,3 +37,5 @@ Route::group([
 
 Route::post('store', 'OnderzoekController@store');
 
+//onderzoek aanvragen voor gebruikers
+Route::get('/onderzoeken/{code}', 'OnderzoekController@show');
