@@ -39,7 +39,7 @@ class onderzoekController extends Controller
 
 
 
-}
+
     
     
 
