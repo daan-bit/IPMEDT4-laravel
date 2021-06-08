@@ -24,6 +24,16 @@ class OnderzoekenSeeder extends Seeder
                 'max_aantal_mensen' => 20,
                 'code' => '43B4S'
             ]);
+            DB::table('onderzoeken')->insert([
+                'naam' => 'Onderzoek test 1',
+                'max_aantal_mensen' => 20,
+                'code' => 'ipmedt4alex',
+            ]);
+            DB::table('onderzoeken')->insert([
+                'naam' => 'Onderzoek test 2',
+                'max_aantal_mensen' => 40,
+                'code' => 'a2x3s5r6',
+            ]);
             //
         }
         //
