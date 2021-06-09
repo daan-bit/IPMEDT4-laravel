@@ -36,7 +36,7 @@ Route::group([
 
 });
 
-Route::post('destroy', 'OnderzoekController@destroy');
+Route::put('update', 'OnderzoekController@update');
 Route::post('store', 'OnderzoekController@store');
 Route::get('onderzoeken', 'OnderzoekController@index');
 Route::get('onderzoek/{id}', 'OnderzoekController@show');

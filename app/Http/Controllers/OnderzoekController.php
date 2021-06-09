@@ -13,13 +13,17 @@ class onderzoekController extends Controller
             return 'Onderzoek in database aangemaakt';
         }
         
-    public function destroy(Request $request){
-        DB::table('onderzoeken')->where('naam', $request->all())->delete();
-        return 'Onderzoek uit database verwijderd';
+    public function update(Request $request){
+        $onderzoek = Onderzoek::find($request->input('id'));
+        $onderzoek->deleted = 1;
+
+        $onderzoek->save();
+        return response()->json("Succesvol verwijderd");
     }
         
     public function index(){
-        return Onderzoek::all();
+        $onderzoeken = Onderzoek::where('deleted','=',0)->get();
+        return $onderzoeken;
     }
 
     //toegevoegd door alex, dit wordt straks in een div gezet bij vragen aanmaken en andere functionaliteiten

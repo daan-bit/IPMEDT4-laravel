@@ -16,7 +16,7 @@ class CreateAntwoordenTable extends Migration
         Schema::create('antwoorden', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('vraag_id');
-            $table->foreign("vraag_id")->references("id")->on("vragen");
+            $table->foreign("vraag_id")->references("id")->on("vragen")->onDelete('cascade');
             $table->string('antwoord');
         });
     }
