@@ -20,7 +20,7 @@ class onderzoekController extends Controller
         $onderzoek->save();
         return response()->json("Succesvol verwijderd");
     }
-        
+
     public function index(){
         $onderzoeken = Onderzoek::where('deleted','=',0)->get();
         return $onderzoeken;
@@ -31,21 +31,16 @@ class onderzoekController extends Controller
         $onderzoeken = Onderzoek::find($id);
         return response()->json($onderzoeken);
     }
- 
-    public function show_gebruiker($code){    
+
+    public function show_gebruiker($code){
         $onderzoek = Onderzoek::where('code','=',$code)->first();
         //dd($onderzoek);
         //return response()->json($onderzoek,200);
         return $onderzoek;
 
-    }        
+    }
+    public function showQuestion($id) {
+        $vragen = Onderzoek::find($id)->vragen;
+        return response()->json($vragen);
+    }
 }
-
-
-
-
-    
-    
-
-
-    
