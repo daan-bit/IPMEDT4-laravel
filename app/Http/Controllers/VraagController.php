@@ -10,7 +10,8 @@ class VraagController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['show']]);
+        //$this->middleware('auth:api', ['except' => ['show']]);
+        // you need to be authenticated
     }
 
     public function store(Request $request){
@@ -32,4 +33,14 @@ class VraagController extends Controller
         $vragen = Vraag::find($id);
         return response()->json($vragen);
     }   
+
+    // 
+
+    public function index_gebruiker($onderzoek_id) {
+        $vragen = Vraag::find($onderzoek_id)->all();
+        return response()->json($vragen);
+    }
+  
 }
+
+//This function need to show all the vraag with the code
