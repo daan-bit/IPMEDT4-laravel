@@ -15,7 +15,7 @@ class CreateOnderzoekenTable extends Migration
     {
         Schema::create('onderzoeken', function (Blueprint $table) {
             $table->id();
-            $table->string('naam')->default('onderzoek1');
+            $table->string('naam')->default("jaja");
             $table->integer('max_aantal_mensen')->default('1');
             $table->string('code')->default('0000');
         });

@@ -9,6 +9,17 @@ class onderzoekController extends Controller
 {
     public function store(Request $request){
 
+            $onderzoek  = new Onderzoek();
+            $onderzoek->naam = $request->naam;
+            $onderzoek->code = $request->code;
+
+            $gesaved = $onderzoek->save(); 
+            if($gesaved) {
+            return response()->json(['message' => 'Onderzoek succesvol toegevoegd!'], 200);
+            } else {
+                return response()->json(['message' => 'Onderzoek kon niet toegevoegd worden. Probeer opnieuw!', 401]);  
+            }
+
             Onderzoek::create($request->all());
             return 'Onderzoek in database aangemaakt';
         }
