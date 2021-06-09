@@ -12,12 +12,12 @@ class onderzoekController extends Controller
             Onderzoek::create($request->all());
             return 'Onderzoek in database aangemaakt';
         }
-        
+
     public function destroy(Request $request){
         DB::table('onderzoeken')->where('naam', $request->all())->delete();
         return 'Onderzoek uit database verwijderd';
     }
-        
+
     public function index(){
         return Onderzoek::all();
     }
@@ -27,21 +27,16 @@ class onderzoekController extends Controller
         $onderzoeken = Onderzoek::find($id);
         return response()->json($onderzoeken);
     }
- 
-    public function show_gebruiker($code){    
+
+    public function show_gebruiker($code){
         $onderzoek = Onderzoek::where('code','=',$code)->first();
         //dd($onderzoek);
         //return response()->json($onderzoek,200);
         return $onderzoek;
 
-    }        
+    }
+    public function showQuestion($id) {
+        $vragen = Onderzoek::find($id)->vragen;
+        return response()->json($vragen);
+    }
 }
-
-
-
-
-    
-    
-
-
-    

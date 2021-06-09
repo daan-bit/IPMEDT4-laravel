@@ -14,4 +14,8 @@ class Onderzoek extends Model
     public $timestamps = false;
     
     protected $table = 'onderzoeken';
+
+    public function vragen() {
+        return $this->hasMany(Vraag::class, 'onderzoek_id');
+    }
 }
