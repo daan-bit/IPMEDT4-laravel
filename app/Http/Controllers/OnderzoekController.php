@@ -19,7 +19,7 @@ class onderzoekController extends Controller
         
     public function index(){
         return Onderzoek::all();
-        }
+    }
 
     //toegevoegd door alex, dit wordt straks in een div gezet bij vragen aanmaken en andere functionaliteiten
     public function show($id) {
