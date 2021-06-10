@@ -51,3 +51,6 @@ Route::get('categorien/all', 'CategorieController@index');
 
 //onderzoek aanvragen voor gebruikers
 Route::get('/onderzoeken/{code}', 'OnderzoekController@show');
+
+//antwoorden bekijken
+Route::get('vraag/{id}/antwoorden', 'VraagController@showAntwoorden');

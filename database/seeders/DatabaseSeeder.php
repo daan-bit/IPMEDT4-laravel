@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             OnderzoekenSeeder::class,
             VragenTableSeeder::class,
             OnderzoekenTableSeeder::class,
+            AntwoordenTableSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }
