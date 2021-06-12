@@ -49,3 +49,9 @@ Route::get('categorien/all', 'CategorieController@index');
 //onderzoek aanvragen voor gebruikers
 Route::get('/onderzoeken/{code}', 'OnderzoekController@show_gebruiker');
 Route::get('/onderzoeken/{onderzoek_id}/vragen', 'VraagController@index_gebruiker');
+
+
+//vragen aanvragen voor Joey
+Route::get('/vragen/{​​​id}​​​', 'VraagController@show');
+
+ 

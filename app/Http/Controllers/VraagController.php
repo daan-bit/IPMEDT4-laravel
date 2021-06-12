@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 use App\Models\Vraag;
  
@@ -26,21 +26,20 @@ class VraagController extends Controller
         } else {
             return response()->json(['message' => 'Vraag kon niet toegevoegd worden. Probeer opnieuw!', 401]);  
         }
-    
-}
-
-    public function show($id) {
-        $vragen = Vraag::find($id);
-        return response()->json($vragen);
-    }   
-
-    // 
-
-    public function index_gebruiker($onderzoek_id) {
-        $vragen = Vraag::find($onderzoek_id)->all();
-        return response()->json($vragen);
     }
-  
+
+    // public function show($id) {
+    //     $vragen = Vraag::find($id);
+    //     dd($vragen);
+    //     return response()->json($vragen);
+    // }   
+
+    public function index_gebruiker($onderzoek_id){
+        $vraag1 = Vraag::find($onderzoek_id)->All();
+        return ($vraag1);
+        // return response()->json($vraag,200);
+    }
+
 }
 
-//This function need to show all the vraag with the code
+

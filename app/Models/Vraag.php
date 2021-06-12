@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notifiable;
 class Vraag extends Model 
 {
     protected $guarded = [];
-    protected $fillable = ['vraag'];
+    protected $fillable = ['vraag', 'onderzoek_id','cat_naam'];
     use HasFactory;
     public $timestamps = false;
     protected $table = 'vragen';
