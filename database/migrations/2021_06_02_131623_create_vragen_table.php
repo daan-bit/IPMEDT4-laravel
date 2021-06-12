@@ -16,9 +16,9 @@ class CreateVragenTable extends Migration
         Schema::create('vragen', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('onderzoek_id');
-            $table->foreign("onderzoek_id")->references("id")->on("onderzoeken");
+            $table->foreign("onderzoek_id")->references("id")->on("onderzoeken")->onDelete('cascade');
             $table->string('cat_naam');
-            $table->foreign("cat_naam")->references("naam")->on("categorien");
+            $table->foreign("cat_naam")->references("naam")->on("categorien")->onDelete('cascade');
             $table->string('vraag');
             $table->string('type_vraag')->default('meerkeuze'); //open of meerkeuze
         });

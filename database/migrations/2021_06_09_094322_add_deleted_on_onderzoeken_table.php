@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOnderzoekenTable extends Migration
+class AddDeletedOnOnderzoekenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateOnderzoekenTable extends Migration
      */
     public function up()
     {
-        Schema::create('onderzoeken', function (Blueprint $table) {
-            $table->id();
-            $table->string('naam')->default("jaja");
-            $table->integer('max_aantal_mensen')->default('1');
-            $table->string('code')->default('0000');
+        Schema::table('onderzoeken', function (Blueprint $table) {
+            $table->boolean('deleted')->default(0);
         });
     }
 
@@ -28,6 +25,6 @@ class CreateOnderzoekenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('onderzoeken');
+        //
     }
 }

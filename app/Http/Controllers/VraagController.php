@@ -19,6 +19,7 @@ class VraagController extends Controller
         $vraag->onderzoek_id = $request->onderzoek_id;
         $vraag->cat_naam = $request->cat_naam;
         $vraag->vraag = $request->vraag;
+        $vraag->type_vraag = $request->type_vraag;
 
         $gesaved = $vraag->save(); 
         if($gesaved) {
