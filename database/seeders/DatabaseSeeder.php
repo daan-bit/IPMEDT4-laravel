@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             CategorienSeeder::class,
             OnderzoekenSeeder::class,
             VragenTableSeeder::class,
-            OnderzoekenTableSeeder::class,
+            
+
         ]);
         // \App\Models\User::factory(10)->create();
     }

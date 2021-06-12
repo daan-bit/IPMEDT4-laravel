@@ -19,5 +19,11 @@ class VragenTableSeeder extends Seeder
                 'vraag' => 'Hoe leuk vindt u uw collegas  op school?',
                 'type_vraag' => 'open'
             ]);
+            DB::table('vragen')->insert([
+                'onderzoek_id' => 1,
+                'cat_naam' => 'Informatica',
+                'vraag' => 'Wat doe je het vaakste op school',
+                'type_vraag' => 'open'
+            ]);
     }
 }

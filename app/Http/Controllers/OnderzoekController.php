@@ -43,15 +43,17 @@ class onderzoekController extends Controller
         return response()->json($onderzoeken);
     }
 
-    public function show_gebruiker($code){
+ 
+    //aanvraag tot opvragen van een onderzoek met de bepaalde code
+    public function show_gebruiker($code){    
         $onderzoek = Onderzoek::where('code','=',$code)->first();
-        //dd($onderzoek);
-        //return response()->json($onderzoek,200);
-        return $onderzoek;
+        return response()->json($onderzoek,200);
+    }        
 
-    }
+    
     public function showQuestion($id) {
         $vragen = Onderzoek::find($id)->vragen;
         return response()->json($vragen);
     }
 }
+

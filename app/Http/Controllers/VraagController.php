@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 use App\Models\Vraag;
  
@@ -10,7 +10,8 @@ class VraagController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['show']]);
+        //$this->middleware('auth:api', ['except' => ['show']]);
+        // you need to be authenticated
     }
 
     public function store(Request $request){
@@ -26,11 +27,20 @@ class VraagController extends Controller
         } else {
             return response()->json(['message' => 'Vraag kon niet toegevoegd worden. Probeer opnieuw!', 401]);  
         }
-    
+    }
+
+    // public function show($id) {
+    //     $vragen = Vraag::find($id);
+    //     dd($vragen);
+    //     return response()->json($vragen);
+    // }   
+
+    public function index_gebruiker($onderzoek_id){
+        $vraag1 = Vraag::find($onderzoek_id)->All();
+        return ($vraag1);
+        // return response()->json($vraag,200);
+    }
+
 }
 
-    public function show($id) {
-        $vragen = Vraag::find($id);
-        return response()->json($vragen);
-    }   
-}
+
