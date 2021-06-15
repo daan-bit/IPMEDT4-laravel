@@ -16,6 +16,6 @@ class Onderzoek extends Model
     protected $table = 'onderzoeken';
 
     public function vragen() {
-        return $this->hasMany(Vraag::class, 'onderzoek_id');
+        return $this->hasMany(Vraag::class, 'onderzoek_id')->where('deleted','=',0);
     }
 }

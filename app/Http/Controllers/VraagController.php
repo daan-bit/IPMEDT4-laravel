@@ -57,6 +57,8 @@ class VraagController extends Controller
         $antwoorden = Vraag::find($id)->antwoorden;
         return response()->json($antwoorden);
     }
+
+    
 }
 
 
