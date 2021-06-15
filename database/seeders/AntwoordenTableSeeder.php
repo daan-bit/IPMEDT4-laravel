@@ -16,83 +16,83 @@ class AntwoordenTableSeeder extends Seeder
     {
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer eens',
+            'antwoord' => '5',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'eens',
+            'antwoord' => '4',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer eens',
+            'antwoord' => '5',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer eens',
+            'antwoord' => '5',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer eens',
+            'antwoord' => '5',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer eens',
+            'antwoord' => '5',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'eens',
+            'antwoord' => '4',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'eens',
+            'antwoord' => '4',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'oneens',
+            'antwoord' => '2',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'oneens',
+            'antwoord' => '2',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'oneens',
+            'antwoord' => '2',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer eens',
+            'antwoord' => '5',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer oneens',
+            'antwoord' => '4',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer oneens',
+            'antwoord' => '4',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer oneens',
+            'antwoord' => '2',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer oneens',
+            'antwoord' => '2',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer oneens',
+            'antwoord' => '3',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer oneens',
+            'antwoord' => '2',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer oneens',
+            'antwoord' => '2',
         ]);
         DB::table('antwoorden')->insert([
             'vraag_id' => 1,
-            'antwoord' => 'zeer oneens',
+            'antwoord' => '1',
         ]);
 
         //
