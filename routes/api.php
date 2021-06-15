@@ -57,4 +57,7 @@ Route::get('/onderzoeken/{onderzoek_id}/vragen', 'VraagController@index_gebruike
 //vragen aanvragen voor Joey
 Route::get('/vragen/{​​​id}​​​', 'VraagController@show');
 
+//Verwijderen van vragen, ROUTE NOG AANPASSEN!!!!
+Route::put('update/vragen', 'VraagController@update');
+
  

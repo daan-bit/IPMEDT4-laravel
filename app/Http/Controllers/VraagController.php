@@ -41,6 +41,14 @@ class VraagController extends Controller
         // return response()->json($vraag,200);
     }
 
+    public function update(Request $request){
+        $vraag = Vraag::find($request->input('id', 'onderzoek_id'));
+        $vraag->deleted = 1;
+
+        $vraag->save();
+        return response()->json("Succesvol verwijderd");
+    }
+
 }
 
 

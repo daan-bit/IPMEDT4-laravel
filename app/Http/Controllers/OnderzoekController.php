@@ -55,5 +55,7 @@ class onderzoekController extends Controller
         $vragen = Onderzoek::find($id)->vragen;
         return response()->json($vragen);
     }
+
+    
 }
 
