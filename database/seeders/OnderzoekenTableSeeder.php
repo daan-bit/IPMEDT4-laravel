@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use DB;
-class OnderzoekenSeeder extends Seeder
+class OnderzoekenTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class OnderzoekenSeeder extends Seeder
     {
         {
             DB::table('onderzoeken')->insert([
-                'naam' => 'Tevredenheidsonderzoek over catering',
+                'naam' => 'Tevredenheidsonderzoek over school',
                 'max_aantal_mensen' => 100,
                 'code' => '5AB4E'
             ]);

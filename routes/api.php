@@ -33,6 +33,7 @@ Route::group([
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
     Route::post('vragen/store', 'VraagController@store');
+    
 
 });
 
@@ -40,7 +41,7 @@ Route::put('update', 'OnderzoekController@update');
 Route::post('store', 'OnderzoekController@store');
 Route::get('onderzoeken', 'OnderzoekController@index');
 Route::get('onderzoek/{id}', 'OnderzoekController@show');
-//we zullen de naam van functie showquestion nog wijzigen, dit is tijdelijk
+
 Route::get('onderzoek/{id}/vragen', 'OnderzoekController@showQuestion');
 
 /*Beveiligde route*/
@@ -55,9 +56,14 @@ Route::get('/onderzoeken/{onderzoek_id}/vragen', 'VraagController@index_gebruike
 
 
 //vragen aanvragen voor Joey
-Route::get('/vragen/{​​​id}​​​', 'VraagController@show');
+//Route::get('vragen/{​​​id}​​​', 'VraagController@show');
 
 //Verwijderen van vragen, ROUTE NOG AANPASSEN!!!!
 Route::put('update/vragen', 'VraagController@update');
 
  
+//Route::get('/onderzoeken/{code}', 'OnderzoekController@show');
+
+//antwoorden bekijken
+Route::get('vraag/{id}/antwoorden', 'VraagController@showAntwoorden');
+Route::get('vraag/{id}', "VraagController@show");

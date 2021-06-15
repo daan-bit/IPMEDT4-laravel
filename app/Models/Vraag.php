@@ -15,5 +15,8 @@ class Vraag extends Model
     public $timestamps = false;
     protected $table = 'vragen';
 
+    public function antwoorden() {
+        return $this->hasMany(Antwoord::class, 'vraag_id');
+    }
     
 }
