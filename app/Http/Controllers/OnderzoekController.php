@@ -52,7 +52,7 @@ class onderzoekController extends Controller
 
     
     public function showQuestion($id) {
-        $vragen = Onderzoek::find($id)->vragen;
+        $vragen = Onderzoek::find($id)->vragen->where('deleted','=',0);
         return response()->json($vragen);
     }
 
