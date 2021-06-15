@@ -10,8 +10,7 @@ class VraagController extends Controller
 
     public function __construct()
     {
-        //$this->middleware('auth:api', ['except' => ['show']]);
-        // you need to be authenticated
+        $this->middleware('auth:api', ['except' => ['show', 'showAntwoorden']]);
     }
 
     public function store(Request $request){
@@ -41,6 +40,15 @@ class VraagController extends Controller
         // return response()->json($vraag,200);
     }
 
+    public function show($id) {
+        $vragen = Vraag::find($id);
+        return response()->json($vragen);
+    }
+    
+    public function showAntwoorden($id) {
+        $antwoorden = Vraag::find($id)->antwoorden;
+        return response()->json($antwoorden);
+    }
 }
 
 
