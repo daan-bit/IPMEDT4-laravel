@@ -34,7 +34,7 @@ class VraagController extends Controller
     //     return response()->json($vragen);
     // }   
 
-    public function index_gebruiker($onderzoek_id){
+    public function index($onderzoek_id){
         $vraag1 = Vraag::find($onderzoek_id)->All();
         return ($vraag1);
         // return response()->json($vraag,200);

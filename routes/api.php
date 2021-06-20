@@ -32,7 +32,7 @@ Route::group([
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
-    Route::post('vragen/store', 'VraagController@store');
+    Route::post('vragen', 'VraagController@store');
     
 
 });
@@ -44,25 +44,14 @@ Route::get('onderzoek/{id}', 'OnderzoekController@show');
 
 Route::get('onderzoek/{id}/vragen', 'OnderzoekController@showQuestion');
 
-/*Beveiligde route*/
-//Route::middleware('api:auth')->post('vragen/store', 'VraagController@store');
-
-Route::get('categorien/all', 'CategorieController@index');
-
+Route::get('categorien', 'CategorieController@index');
 
 //onderzoek aanvragen voor gebruikers
 Route::get('/onderzoeken/{code}', 'OnderzoekController@show_gebruiker');
-Route::get('/onderzoeken/{onderzoek_id}/vragen', 'VraagController@index_gebruiker');
+Route::get('/onderzoeken/{onderzoek_id}/vragen', 'VraagController@index');
 
-
-//vragen aanvragen voor Joey
-//Route::get('vragen/{​​​id}​​​', 'VraagController@show');
-
-//Verwijderen van vragen, ROUTE NOG AANPASSEN!!!!
-Route::put('update/vragen', 'VraagController@update');
-
- 
-//Route::get('/onderzoeken/{code}', 'OnderzoekController@show');
+//Verwijderen van vragen
+Route::put('vragen/update', 'VraagController@update');
 
 //antwoorden bekijken
 Route::get('vraag/{id}/antwoorden', 'VraagController@showAntwoorden');
