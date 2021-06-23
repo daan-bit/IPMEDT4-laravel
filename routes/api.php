@@ -47,8 +47,8 @@ Route::get('onderzoek/{id}/vragen', 'OnderzoekController@showQuestion');
 Route::get('categorien', 'CategorieController@index');
 
 //onderzoek aanvragen voor gebruikers
-Route::get('/onderzoeken/{code}', 'OnderzoekController@show_gebruiker');
-Route::get('/onderzoeken/{onderzoek_id}/vragen', 'VraagController@index');
+Route::get('onderzoek/{code}', 'OnderzoekController@show_gebruiker');
+Route::get('onderzoek/{onderzoek_id}/vragen', 'VraagController@index');
 
 //Verwijderen van vragen
 Route::put('vragen/update', 'VraagController@update');
