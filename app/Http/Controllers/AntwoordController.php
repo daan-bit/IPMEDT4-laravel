@@ -12,4 +12,16 @@ class AntwoordController extends Controller
         return response()->json($antwoord, 200);
     }   
     //
+
+    public function save(Request $req) {
+
+        $form = $req->all();
+        $ans_ids = [];
+
+        foreach($form['list'] as $ans){
+            $ans_ids[] = Antwoord::insertGetId($ans);
+        }
+       
+        return response()->json(['list' => $ans_ids, 200 ]);  
+    }
 }

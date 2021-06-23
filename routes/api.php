@@ -56,3 +56,6 @@ Route::put('vragen/update', 'VraagController@update');
 //antwoorden bekijken
 Route::get('vraag/{id}/antwoorden', 'VraagController@showAntwoorden');
 Route::get('vraag/{id}', "VraagController@show");
+
+//Save antwoorden
+Route::post('antwoorden', 'AntwoordController@save');
