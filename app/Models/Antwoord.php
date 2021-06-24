@@ -9,6 +9,7 @@ class Antwoord extends Model
 {
     protected $guarded = [];
     use HasFactory;
+    public $timestamps = false;
     
     protected $table = 'antwoorden';
 }

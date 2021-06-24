@@ -47,7 +47,11 @@ class onderzoekController extends Controller
     //aanvraag tot opvragen van een onderzoek met de bepaalde code
     public function show_gebruiker($code){    
         $onderzoek = Onderzoek::where('code','=',$code)->first();
-        return response()->json($onderzoek,200);
+        if($onderzoek) {
+            return response()->json($onderzoek,200);
+        } else {
+            return response()->json(['errors' => 'Onderzoek met deze code bestaat niet. Probeer nog eens!'], 401);
+        }
     }        
 
     
